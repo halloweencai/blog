@@ -7,9 +7,28 @@ module.exports = {
   },
   themeConfig: {
     nav: [
-      {text: '首页', link: '/'},
-      {text: 'frp配置', link: '/frp'},
-      {text: '算法', link: '/algorithm'},
-    ]
+      { text: '概述', link: '/' },
+      { text: '相关学习',
+        items: [
+          { text: 'js', link: '/learn/js/'},
+          { text: 'algorithm', link: '/learn/algorithm/'}
+        ]
+      }
+    ],
+    sidebar: {
+      '/learn/algorithm/': [
+        'test1',
+        'test2'
+      ],
+      '/learn/js/': [
+        {
+          title: "js",
+          collapsable: true,
+          children: [
+            { title: "js1", path: "js1" }
+          ],
+        }
+      ]
+    },
   }
 }
